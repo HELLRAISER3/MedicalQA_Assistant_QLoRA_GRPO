@@ -1,4 +1,4 @@
-# Medical Q&A Assistant — QLoRA Fine-tuning + GRPO
+# Medical Q&A Assistant - QLoRA Fine-tuning + GRPO
 
 Fine-tuned LLaMA-3.1-8B-Instruct on medical conversation data using QLoRA, then aligned it with GRPO to make it behave more like an actual helpful medical assistant rather than just a text completer.
 
@@ -15,7 +15,3 @@ Fine-tuned LLaMA-3.1-8B-Instruct on medical conversation data using QLoRA, then 
 - `transformers` + `trl` + `peft` + `bitsandbytes`
 - Colab T4 (free tier)
 - Weights logged to wandb
-
-## Why GRPO after SFT
-
-SFT teaches the model to imitate the training examples. GRPO pushes it to actually optimize for the behaviors that matter — safety referrals, not hallucinating dosages, appropriate uncertainty. The two stages do different jobs.
